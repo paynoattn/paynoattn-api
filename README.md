@@ -4,9 +4,9 @@ A simple node-express-mongo app for my MEAN personal site.
 # Getting Started
 ## 1. Setting up your environment
 1. Make sure you have all the dependencies installed
-⋅⋅* [Node.js](https://nodejs.org/en/) (v6.9 or above)
-⋅⋅* Node dependies - run ```npm install``` in a shell in this project directory.
-⋅⋅* [MongoDB](https://www.mongodb.com/download-center?jmp=nav#community)
+  * [Node.js](https://nodejs.org/en/) (v6.9 or above)
+  * Node dependies - run ```npm install``` in a shell in this project directory.
+  * [MongoDB](https://www.mongodb.com/download-center?jmp=nav#community)
 2. Run the mongo executible in a shell (and leave it open) ```mongod```
 3. Copy the ```env.js``` file from ```env.sample.js``` using ```cp env.sample.js env.js``` and change the 'mongoUser' and 'mongoPassword' values to your desired values.
 4. Run the user and roles script by opening a new shell and running ```mongo app/utilities/users-roles.js```
