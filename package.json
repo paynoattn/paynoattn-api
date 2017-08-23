@@ -2,9 +2,11 @@
   "name": "paynoattn-api",
   "version": "0.1.0",
   "description": "A simple expreass-monogo api for personal website",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "start:dev": "NODE_ENV='dev' nodemon server.js",
+    "start:prod": "NODE_ENV='prod' node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/paynoattn/paynoattn-api/issues"
   },
-  "homepage": "https://github.com/paynoattn/paynoattn-api#readme"
+  "homepage": "https://github.com/paynoattn/paynoattn-api#readme",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "mongoose": "^4.11.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
 }
