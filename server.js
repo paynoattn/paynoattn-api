@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
   res.json({status: 'up'});
 });
 
-const postsRouter = require('./app/posts');
+const postsRouter = require('./app/posts/posts');
 app.use('/posts', postsRouter);
 
 const server = app.listen(port, () => {

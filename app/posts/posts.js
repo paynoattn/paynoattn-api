@@ -2,12 +2,13 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema,
       JSONStream = require('JSONStream'),
       express = require('express'),
-      env = require('../env');
+      utils = require('../utilities/mongo-utilities');
 
 const router = express.Router({
   mergeParams: true
 });
-mongoose.connect(env.mongoAddr + '/' + env.mongoDB);
+
+mongoose.connect(utils.getDBAddress());
 
 const postSchema = new Schema(
   {
