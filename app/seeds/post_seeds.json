@@ -1,7 +1,7 @@
 [
   {
     "title": "3 Common Mistakes I see people use in Rx and the Observable Pattern",
-    "category": ["development"],
+    "categories": ["development"],
     "source": "medium",
     "imageURL": "https://media.giphy.com/media/14aumMYgx9CvKw/giphy.gif",
     "date": { "$date": "2017-04-25T12:00:00Z"},
@@ -10,7 +10,7 @@
   },
   {
     "title": "Creating Mock Data for Jasmine Spec and Protractor E2E Tests in Typescript / Angular2",
-    "category": ["development"],
+    "categories": ["development"],
     "source": "medium",
     "date": { "$date": "2017-04-25T12:00:00Z"},
     "link": "https://medium.com/@paynoattn/creating-mock-data-for-jasmine-spec-and-protractor-e2e-tests-in-typescript-angular2-cf514c7ddb06",
@@ -18,7 +18,7 @@
   },
   {
     "title": "Simple Observable Unit Testing in Angular2",
-    "category": ["development"],
+    "categories": ["development"],
     "source": "medium",
     "date": { "$date": "2016-11-29T12:00:00Z"},
     "link": "https://medium.com/@paynoattn/simple-observable-unit-testing-in-angular2-43c4f4a0bfe2",
@@ -26,7 +26,7 @@
   },
   {
     "title": "Angular2 FormBuilder Unit Tests",
-    "category": ["development"],
+    "categories": ["development"],
     "source": "medium",
     "date": { "$date": "2016-11-27T12:00:00Z"},
     "link": "https://medium.com/@paynoattn/angular2-formbuilder-unit-tests-9da5ef5dbbe5",
@@ -34,7 +34,7 @@
   },
   {
     "title": "Angular2 Multipart forms with Component Interaction, Async Operations, and Validation",
-    "category": ["development"],
+    "categories": ["development"],
     "source": "medium",
     "date": { "$date": "2016-11-27T12:00:00Z"},
     "link": "https://medium.com/@paynoattn/angular2-multipart-forms-with-component-interaction-async-operations-and-validation-b21303785869",
@@ -42,7 +42,7 @@
   },
   {
     "title": "Custom Angular2 Form Components using FormBuilder",
-    "category": ["development"],
+    "categories": ["development"],
     "source": "medium",
     "date": { "$date": "2016-11-14T12:00:00Z"},
     "link": "https://medium.com/@paynoattn/custom-angular2-form-components-using-formbuilder-bb9068cd4057",
@@ -50,7 +50,7 @@
   },
   {
     "title": "If we want to find love that lasts, we need to stop blaming our shit on our smartphone.",
-    "category": ["blog"],
+    "categories": ["blog"],
     "source": "medium",
     "imageURL": "https://cdn-images-1.medium.com/max/800/1*6Qh5Zc7Io0C6dAnZukzjsg.jpeg",
     "date": { "$date": "2016-06-26T12:00:00Z"},

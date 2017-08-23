@@ -7,17 +7,15 @@ const express = require('express'),
 app.use(cors());
 
 app.get('/', (req, res) => {
-  res.send('Hello bro');
+  res.json({status: 'up'});
 });
+
+const postsRouter = require('./app/posts');
+app.use('/posts', postsRouter);
 
 const server = app.listen(port, () => {
   console.log('Server running at http://localhost:' + server.address().port);
 });
 
-// app.set('port', (process.env.PORT || 5000));
-
-// app.listen(app.get('port'), function() {
-//   console.log('Node app is running on port', app.get('port'));
-// });
 
 
