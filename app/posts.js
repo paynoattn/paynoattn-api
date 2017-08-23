@@ -3,18 +3,18 @@ const mongoose = require('mongoose'),
 
 const postSchema = new Schema({
   title: { type: String, required: true },
-  category: {
-    type: String,
+  categories: {
+    type: [String],
     required: true,
-    match: [ /^(development|design|writing)$/, "({VALUE}) is not a valid category (development|design|writing)"]
+    match: [ /^(development|design|writing|blog)$/, "({VALUE}) is not a valid category (development|design|writing|blog)"]
   },
+  imageURL: String,
   source: {
     type: String,
     required: true,
-    match: [ /^(facebook|twitter|medium|wordpress)$/, "({VALUE}) is not a valid source (facebook|twitter|medium|wordpress)"]
+    match: [ /^(facebook|twitter|medium|wordpress|behance)$/, "({VALUE}) is not a valid source (facebook|twitter|medium|wordpress)"]
   },
   link: { type: String, required: true },
   preview: String,
   date: { type: Date, required: true, default: Date.now }
 });
-
