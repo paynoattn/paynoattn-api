@@ -20,4 +20,8 @@ Close the previous instance of ```mongod``` using ```Ctrl+c```. Then change the 
 Run ```mongod --port $PORT_IN_ENV_FILE --auth```
 
 ## 3. Run the server
-Run ```npm start``` and our app will run. Simply connect on the port 
+Run ```npm start``` and our app will run. Simply connect to 'localhost:5000' to begin to run your API calls.
+### Development mode
+Run ```npm run start:dev``` instead to get live updates to your express server as you write your code.
+### Prod mode
+Run ```npm run start:prod``` and your server will run on port 80 instead of 5000.
