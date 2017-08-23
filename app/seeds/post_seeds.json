@@ -1,0 +1,50 @@
+[
+  {
+    "title": "3 Common Mistakes I see people use in Rx and the Observable Pattern",
+    "category": "development",
+    "source": "medium",
+    "date": { "$date": "2017-04-25T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/3-common-mistakes-i-see-people-use-in-rx-and-the-observable-pattern-ba55fee3d031",
+    "preview": "<p>Maybe you haven’t heard of Observables, but they’re amazeballs. They’re like Promises, only they can resolve more then once, and can easily be mapped, debounced, merged and zipped.</p>"
+  },
+  {
+    "title": "Creating Mock Data for Jasmine Spec and Protractor E2E Tests in Typescript / Angular2",
+    "category": "development",
+    "source": "medium",
+    "date": { "$date": "2017-04-25T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/creating-mock-data-for-jasmine-spec-and-protractor-e2e-tests-in-typescript-angular2-cf514c7ddb06",
+    "preview": "<p>If you want to create test or mock data for your specs, structure is completely up to you. There are two methods I’ve used, each with their own pros and cons.</p>"
+  },
+  {
+    "title": "Simple Observable Unit Testing in Angular2",
+    "category": "development",
+    "source": "medium",
+    "date": { "$date": "2016-11-29T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/simple-observable-unit-testing-in-angular2-43c4f4a0bfe2",
+    "preview": "<p>When you’re writing unit tests for your angular2 components, and you throw observables into the mix, things can get complicated fast. Some people go the more complicated route, faking responses from the actual service itself — but on the component level I feel this can get overly complicated.</p>"
+  },
+  {
+    "title": "Angular2 FormBuilder Unit Tests",
+    "category": "development",
+    "source": "medium",
+    "date": { "$date": "2016-11-27T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/angular2-formbuilder-unit-tests-9da5ef5dbbe5",
+    "preview": "<p>If you are using formbuilder, you may wonder, okay, now how do I create tests for my component that uses Formbuilder. Currently, this is how I am accomplishing this.</p>"
+  },
+  {
+    "title": "Angular2 Multipart forms with Component Interaction, Async Operations, and Validation",
+    "category": "development",
+    "source": "medium",
+    "date": { "$date": "2016-11-27T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/angular2-multipart-forms-with-component-interaction-async-operations-and-validation-b21303785869",
+    "preview": "<p>If you have to work with large, behemoth forms in Angular2, and want to split those forms out into child components, this can get complicated fast...</p>"
+  },
+  {
+    "title": "Custom Angular2 Form Components using FormBuilder",
+    "category": "development",
+    "source": "medium",
+    "date": { "$date": "2016-11-14T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/custom-angular2-form-components-using-formbuilder-bb9068cd4057",
+    "preview": "<p>If you’re using FormBuilder in Angular2 and are having problems getting everything to work, wondering why why dear God there’s no documentation on how to accomplish such a thing, look no further.</p>"
+  }
+]
