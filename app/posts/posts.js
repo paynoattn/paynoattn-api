@@ -2,13 +2,12 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema,
       JSONStream = require('JSONStream'),
       express = require('express'),
-      utils = require('../utilities/mongo-utilities');
+      mongoUtils = require('../utilities/mongo-utilities'),
+      paginate = require('../utilities/paginate');
 
-const router = express.Router({
-  mergeParams: true
-});
+const router = express.Router();
 
-mongoose.connect(utils.getDBAddress());
+mongoose.connect(mongoUtils.getDBAddress());
 
 const postSchema = new Schema(
   {
@@ -36,7 +35,16 @@ const postSchema = new Schema(
 const Post = mongoose.model('Post', postSchema);
 
 router.get('/', (req, res) => {
-  Post.find().limit(10).sort({ date: 1 })
+  const perPage = paginate.buildPerPageParams(req.query['perPage']),
+        page = paginate.buildPageParams(req.query['page']);
+  Post.find().limit(perPage).skip(perPage * page).sort({ date: -1 })
+    .cursor()
+    .pipe(JSONStream.stringify())
+    .pipe(res.type('json'));
+}).get('/:category', (req, res) => {
+  const perPage = paginate.buildPerPageParams(req.query['perPage']),
+        page = paginate.buildPageParams(req.query['page']);
+  Post.find({ categories: req.params.category }).limit(perPage).skip(perPage * page).sort({ date: -1 })
     .cursor()
     .pipe(JSONStream.stringify())
     .pipe(res.type('json'));
