@@ -2,7 +2,7 @@ const mongoose = require('mongoose'),
       Schema = mongoose.Schema,
       JSONStream = require('JSONStream'),
       express = require('express'),
-      env = require('../../env'),
+      authenticated = require('../utilities/authenticated'),
       mongoUtils = require('../utilities/mongo-utilities'),
       paginate = require('../utilities/paginate');
 
@@ -50,10 +50,7 @@ router.get('/', (req, res) => {
     .pipe(JSONStream.stringify())
     .pipe(res.type('json'));
 }).post('/', (req, res) => {
-  if (
-    req.body['userName'] === env.postUserName &&
-    req.body['password'] === env.postPassword
-  ) {
+  if ( authenticated(req.body) ) {
     req.body['post']['date'] = new Date(req.body['post']['date']);
     Post.create(req.body['post']).then(post => {
       res.json(post);
@@ -66,10 +63,7 @@ router.get('/', (req, res) => {
     res.json({ error: 'Not authorized to post.' });
   }
 }).delete('/:id', (req, res) => { 
-  if (
-    req.body['userName'] === env.postUserName &&
-    req.body['password'] === env.postPassword
-  ) {
+  if ( authenticated(req.body) ) {
     Post.remove({ _id: req.params['id'] }).exec(() => {
       res.status(200);
       res.json('Post succesfull deleted');
