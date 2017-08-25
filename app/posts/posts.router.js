@@ -10,18 +10,18 @@ const router = express.Router();
 
 mongoose.connect(mongoUtils.getDBAddress());
 
+function buildGet(get, queryParams) {
+  const perPage = paginate.buildPerPageParams(queryParams['perPage']),
+        page = paginate.buildPageParams(queryParams['page']);
+  return get.limit(perPage).skip(perPage * page).sort({ date: -1 }).cursor();
+}
+
 router.get('/', (req, res) => {
-  const perPage = paginate.buildPerPageParams(req.query['perPage']),
-    page = paginate.buildPageParams(req.query['page']);
-  Post.find().limit(perPage).skip(perPage * page).sort({ date: -1 })
-    .cursor()
+  buildGet(Post.find(), req.query)
     .pipe(JSONStream.stringify())
     .pipe(res.type('json'));
 }).get('/:category', (req, res) => {
-  const perPage = paginate.buildPerPageParams(req.query['perPage']),
-    page = paginate.buildPageParams(req.query['page']);
-  Post.find({ categories: req.params.category }).limit(perPage).skip(perPage * page).sort({ date: -1 })
-    .cursor()
+  buildGet(Post.find({ categories: req.params.category }), req.query)
     .pipe(JSONStream.stringify())
     .pipe(res.type('json'));
 }).post('/', (req, res) => {
