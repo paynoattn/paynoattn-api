@@ -51,25 +51,26 @@ router.get('/', (req, res) => {
     .pipe(res.type('json'));
 }).post('/', (req, res) => {
   if (
-    req.params['userName'] === env.postUserName &&
-    req.params['password'] === env.postPassword
+    req.body['userName'] === env.postUserName &&
+    req.body['password'] === env.postPassword
   ) {
-    Post.create(req.params['post']).then(post => {
-      res.json(JSON.stringify(post));
+    req.body['post']['date'] = new Date(req.body['post']['date']);
+    Post.create(req.body['post']).then(post => {
+      res.json(post);
     }).catch(err => {
       res.status(500);
       res.json({ error: err });
     })
   } else {
     res.status(403);
-    res.json(JSON.stringify({ error: 'Not authorized to post.' }));
+    res.json({ error: 'Not authorized to post.' });
   }
 }).delete('/:id', (req, res) => { 
   if (
-    req.params['userName'] === env.postUserName &&
-    req.params['password'] === env.postPassword
+    req.body['userName'] === env.postUserName &&
+    req.body['password'] === env.postPassword
   ) {
-    Post.remove({ id: req.params['id'] }).exec(() => {
+    Post.remove({ _id: req.params['id'] }).exec(() => {
       res.status(200);
       res.json('Post succesfull deleted');
     }).catch(err => {
