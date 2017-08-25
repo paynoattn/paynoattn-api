@@ -1,39 +1,14 @@
 const mongoose = require('mongoose'),
-      Schema = mongoose.Schema,
       JSONStream = require('JSONStream'),
       express = require('express'),
       authenticated = require('../utilities/authenticated'),
       mongoUtils = require('../utilities/mongo-utilities'),
-      paginate = require('../utilities/paginate');
+      paginate = require('../utilities/paginate'),
+      Post = require('./posts.model');
 
 const router = express.Router();
 
 mongoose.connect(mongoUtils.getDBAddress());
-
-const postSchema = new Schema(
-  {
-    title: { type: String, required: true },
-    categories: {
-      type: [String],
-      required: true,
-      match: [ /^(development|design|writing|blog)$/, "({VALUE}) is not a valid category (development|design|writing|blog)"]
-    },
-    imageURL: String,
-    source: {
-      type: String,
-      required: true,
-      match: [ /^(facebook|twitter|medium|wordpress|behance)$/, "({VALUE}) is not a valid source (facebook|twitter|medium|wordpress)"]
-    },
-    link: { type: String, required: true },
-    preview: String,
-    date: { type: Date, required: true, default: Date.now }
-  },
-  {
-    collection: 'posts'
-  }
-);
-
-const Post = mongoose.model('Post', postSchema);
 
 router.get('/', (req, res) => {
   const perPage = paginate.buildPerPageParams(req.query['perPage']),

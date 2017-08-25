@@ -27,9 +27,15 @@
     "body-parser": "^1.17.2",
     "cors": "^2.8.4",
     "express": "^4.15.4",
-    "mongoose": "^4.11.7"
+    "method-override": "^2.3.9",
+    "mongoose": "^4.11.7",
+    "morgan": "^1.8.2"
   },
   "devDependencies": {
-    "nodemon": "^1.11.0"
+    "chai": "^4.1.1",
+    "mocha": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "sinon": "^3.2.1",
+    "sinon-mongoose": "^2.0.2"
   }
 }
