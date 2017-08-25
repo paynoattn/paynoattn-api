@@ -44,7 +44,7 @@ router.get('/', (req, res) => {
       res.json('Post succesfull deleted');
     }).catch(err => {
       res.status(500);
-      res.json(JSON.stringify({ Error: err }));
+      res.json({ Error: err });
     });
   }
 });
