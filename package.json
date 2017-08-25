@@ -7,7 +7,8 @@
     "start": "node server.js",
     "start:dev": "NODE_ENV='dev' nodemon server.js",
     "start:prod": "NODE_ENV='prod' node server.js",
-    "seed": "mongoimport -d paynoattn -c posts --jsonArray --file app/posts/post-seeds.json --upsert --drop"
+    "seed": "mongoimport -d paynoattn -c posts --jsonArray --file app/posts/post-seeds.json --upsert --drop",
+    "test": "mocha './app/**/*.spec.js'"
   },
   "repository": {
     "type": "git",
