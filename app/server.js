@@ -5,7 +5,8 @@ const express = require('express'),
       bodyParser = require('body-parser'),
       app = express(),
       env = process.env.NODE_ENV ? process.env.NODE_ENV : 'dev',
-      port = env === 'dev' ? 5000 : 80;
+      port = env === 'dev' ? 5000 : 80,
+      upTimeDate = new Date().toISOString();
 
 app.use(cors());                                                // Add cors headers to responses
 app.use(morgan('dev'));                                         // log every request to the console
@@ -15,13 +16,18 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' })); // parse applica
 app.use(methodOverride());
 
 app.get('/', (req, res) => {
-  res.json({status: 'up'});
+  res.json({
+    status: 'up',
+    upTime: upTimeDate
+  });
 });
 
-const postsRouter = require('./app/posts/posts.router');
+const postsRouter = require('./posts/posts.router');
 app.use('/posts', postsRouter);
 
 const server = app.listen(port, err => {
   if (err) throw err;
   console.log('Server running at http://localhost:' + server.address().port);
 });
+
+module.exports = server;
