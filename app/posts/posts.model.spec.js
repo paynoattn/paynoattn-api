@@ -1,5 +1,5 @@
 const expect = require('chai').expect,
-  Post = require('./posts.model'),
+  Post = require('./posts.model').Post,
   fakePost = require('./posts.faker');
 
 

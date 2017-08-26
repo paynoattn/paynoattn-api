@@ -1,13 +1,8 @@
 const faker = require('faker'),
-      randomArray = require('../utilities/functions').randomArray;
-
-const categories = [
-  'development', 'design', 'writing', 'blog'
-];
-
-const sources = [
-  'facebook', 'twitter', 'medium', 'wordpress', 'behance'
-];
+      randomArray = require('../utilities/functions').randomArray,
+      postModel = require('./posts.model'),
+      categories = postModel.categories,
+      sources = postModel.sources;
 
 function random(array) {
   return array

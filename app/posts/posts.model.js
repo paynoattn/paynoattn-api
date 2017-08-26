@@ -1,10 +1,18 @@
 const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
 
+const categories = [
+  'development', 'design', 'writing', 'blog'
+];
+
+const sources = [
+  'facebook', 'twitter', 'medium', 'wordpress', 'behance'
+];
+
 function categoryValidator(arr) {
   if (!Array.isArray(arr)) return false;
   return arr.every((val) => {
-    return /^(development|design|writing|blog)$/.test(val);
+    return categories.indexOf(val) > -1;
   });
 }
 
@@ -17,7 +25,10 @@ const postSchema = new Schema(
     categories: {
       type: [String],
       required: true,
-      validate: categoryValidator
+      validate: [
+        categoryValidator,
+        '{VALUE} is not valid category'
+      ]
     },
     imageURL: {
       type: String
@@ -25,7 +36,7 @@ const postSchema = new Schema(
     source: {
       type: String,
       required: true,
-      match: [ /^(facebook|twitter|medium|wordpress|behance)$/, "({VALUE}) is not a valid source (facebook|twitter|medium|wordpress)"]
+      enum: sources
     },
     link: {
       type: String,
@@ -45,4 +56,8 @@ const postSchema = new Schema(
   }
 );
 
-module.exports = mongoose.model('Post', postSchema);
+module.exports = {
+  categories: categories, 
+  Post: mongoose.model('Post', postSchema),
+  sources: sources
+};

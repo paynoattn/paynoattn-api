@@ -4,7 +4,7 @@ const mongoose = require('mongoose'),
       authenticated = require('../utilities/authenticated'),
       mongoUtils = require('../utilities/mongo-utilities'),
       paginate = require('../utilities/paginate'),
-      Post = require('./posts.model');
+      Post = require('./posts.model').Post;
 
 const router = express.Router();
 
