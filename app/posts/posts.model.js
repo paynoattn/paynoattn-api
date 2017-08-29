@@ -1,5 +1,6 @@
 const mongoose = require('mongoose'),
       Schema = mongoose.Schema;
+mongoose.Promise = global.Promise;
 
 const categories = [
   'development', 'design', 'writing', 'blog'
