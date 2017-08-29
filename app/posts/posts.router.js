@@ -1,5 +1,4 @@
-const mongoose = require('mongoose'),
-      JSONStream = require('JSONStream'),
+const JSONStream = require('JSONStream'),
       express = require('express'),
       authenticated = require('../utilities/authenticated'),
       mongoUtils = require('../utilities/mongo-utilities'),
@@ -7,8 +6,6 @@ const mongoose = require('mongoose'),
       Post = require('./posts.model').Post;
 
 const router = express.Router();
-
-mongoose.connect(mongoUtils.getDBAddress());
 
 function buildGet(get, queryParams) {
   const perPage = paginate.buildPerPageParams(queryParams['perPage']),
@@ -39,7 +36,7 @@ router.get('/', (req, res) => {
   }
 }).delete('/:id', (req, res) => { 
   if ( authenticated(req.body) ) {
-    Post.remove({ _id: req.params['id'] }).exec(() => {
+    Post.remove({ _id: req.params['id'] }).exec().then(() => {
       res.status(200);
       res.json('Post succesfull deleted');
     }).catch(err => {

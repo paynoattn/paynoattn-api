@@ -4,7 +4,7 @@ const request = require('supertest'),
 describe('server', () => {
   let server;
   beforeEach(() => {
-    server = require('./server'), { bustCache: true };
+    server = require('./server', { bustCache: true });
   });
   afterEach(() => {
     server.close();

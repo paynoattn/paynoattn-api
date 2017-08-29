@@ -1,7 +1,6 @@
 const expect = require('chai').expect,
-  Post = require('./posts.model').Post,
-  fakePost = require('./posts.faker');
-
+      Post = require('./posts.model').Post,
+      fakePost = require('./posts.faker');
 
 describe('Post validations', () => {
   it('should have a valid factory', (done) => {
