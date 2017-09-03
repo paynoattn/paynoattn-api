@@ -5,7 +5,7 @@ var password = module.exports.mongoPassword;
 
 // connect to mongo db
 connection = new Mongo();
-db = connection.getDB('paynoattn');
+db = connection.getDB('admin');
 
 // drop role and user if it already exists
 db.dropRole("app");

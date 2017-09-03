@@ -1,7 +1,12 @@
 const env = require('../../env.js');
 
 function getDBAddress() {
-  return 'mongodb://' + env.mongoUser + ':' + env.mongoPassword + '@' + env.mongohost + '/' + env.mongoDB;
+  let address = 'mongodb://';
+  if (env.mongoUser && env.mongoPassword) {
+    address +=env.mongoUser + ':' + env.mongoPassword + '@'
+  }
+  address += env.mongohost + '/' + env.mongoDB;
+  return address;
 }
 
 module.exports = {
