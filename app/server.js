@@ -6,8 +6,8 @@ const express = require('express'),
       mongoose = require('mongoose'),
       mongoUtils = require('./utilities/mongo-utilities'),
       app = express(),
+      envf = require('../env'),
       env = process.env.NODE_ENV ? process.env.NODE_ENV : 'dev',
-      port = env === 'dev' ? 5000 : 80,
       upTimeDate = new Date().toISOString();
 
 app.use(cors());                                                // Add cors headers to responses
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 const postsRouter = require('./posts/posts.router');
 app.use('/posts', postsRouter);
 
-const server = app.listen(port, err => {
+const server = app.listen(envf.appPort, err => {
   if (err) throw err;
   console.log('Server running at http://localhost:' + server.address().port);
 });

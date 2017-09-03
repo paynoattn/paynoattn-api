@@ -1,4 +1,5 @@
 module.exports = {
+  'appPort': 5000,
   'mongohost': 'localhost',
   'mongoDB': 'paynoattn',
   'mongoPort': '$REPLACE_ME',

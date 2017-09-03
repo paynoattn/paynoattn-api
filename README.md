@@ -9,7 +9,8 @@ A simple node-express-mongo app for my MEAN personal site.
   * [MongoDB](https://www.mongodb.com/download-center?jmp=nav#community)
 2. Run the mongo executible in a shell (and leave it open) ```mongod```
 3. Copy the ```env.js``` file from ```env.sample.js``` using ```cp env.sample.js env.js``` and change the 'mongoUser' and 'mongoPassword' values to your desired values.
-4. Run the user and roles script by opening a new shell and running ```mongo app/utilities/users-roles.js```
+4. Configure the port you wish to use your node app on. Default is 5000, and then you should use a proxy like [nginx] to route http/https traffic to your server. 
+5. Run the user and roles script by opening a new shell and running ```mongo app/utilities/users-roles.js```
 
 ## 3. Seeding Data
 Our app needs some data. Simply run ```npm run seed``` and it will seed our mongodb database with some data.
