@@ -1,6 +1,9 @@
 # environment Files
 env.js
 
+# npm log
+npm-debug.log
+
 # dependencies
 /node_modules
 
