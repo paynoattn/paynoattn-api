@@ -50,11 +50,56 @@
   },
   {
     "title": "If we want to find love that lasts, we need to stop blaming our shit on our smartphone.",
-    "categories": ["blog"],
+    "categories": ["blog", "writing"],
     "source": "medium",
     "imageURL": "https://cdn-images-1.medium.com/max/800/1*6Qh5Zc7Io0C6dAnZukzjsg.jpeg",
     "date": { "$date": "2016-06-26T12:00:00Z"},
     "link": "https://medium.com/@paynoattn/if-we-want-to-find-love-that-lasts-we-need-to-stop-blaming-our-shit-on-our-smartphone-8533ad71d582",
     "preview": "<p>There seems to be this idea going around lately that love is incredibly hard to find in the age of social media and smartphones, or at least harder then it used to be. Facebook, instagram, pinterest, and tinder (but especially tinder) are making it impossible to just settle down with someone and stay settled down.</p>"
+  },
+  {
+    "title": "Dreams of a Red Horizon Book Cover",
+    "categories": ["design"],
+    "source": "behance",
+    "imageURL": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b095fe9985343.560dd875b5904.png",
+    "date": { "$date": "2013-06-23T12:00:00Z"},
+    "link": "https://www.behance.net/gallery/9985343/Dreams-of-a-Red-Horizon-Cover",
+    "preview": "<p>This is the cover for a literary project I recently finished that's still currently seeking representation. Created in Illustrator CS6. Still playing around with typefaces. .</p>"
+  },
+  {
+    "title": "Metro Wordpress Theme",
+    "categories": ["design"],
+    "source": "behance",
+    "imageURL": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/6bb3c219582553.562e72e5619ef.png",
+    "date": { "$date": "2014-09-07T12:00:00Z"},
+    "link": "https://www.behance.net/gallery/19582553/Metro-as-it-was-previously-known-Wordpress-Theme",
+    "preview": "<p>My gol with 'Metro, as it was previously known' was to mockup a wordpress theme inspired by the Windows 'Modern' (previously known as 'Metro') look for Windows 8...</p>"
+  },
+  {
+    "title": "Artifex Touch Branding & Web",
+    "categories": ["design"],
+    "source": "behance",
+    "imageURL": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/7462e220265023.562e87936c76a.png",
+    "date": { "$date": "2014-10-04T12:00:00Z"},
+    "link": "https://www.behance.net/gallery/20265023/Artifex-Touch-Branding-Web",
+    "preview": "<p>This is the work that I did during an internship in the summer of my junior year of college.</p>"
+  },
+  {
+    "title": "Stromae Ad Campaign",
+    "categories": ["design"],
+    "source": "behance",
+    "imageURL": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/02cc8022688311.56316cdfc3df3.jpg",
+    "date": { "$date": "2014-11-11T12:00:00Z"},
+    "link": "https://www.behance.net/gallery/22688311/Stromae-Ad-Campaign-Concept",
+    "preview": "<p>For a graphic design class, I was instructed to create a full advertising campaign, including a Magazine Cover, a flyer, a T-Shirt and a billboard. Based on the assignment, I decided to create a campaign for a fictional concert of the musician Stromae in New York City. What you see below is the fruit of these efforts.</p>"
+  },
+  {
+    "title": "Dreams of a Red Horizon",
+    "categories": ["writing"],
+    "source": "other",
+    "imageURL": "https://mir-s3-cdn-cf.behance.net/project_modules/disp/b095fe9985343.560dd875b5904.png",
+    "date": { "$date": "2016-01-24T12:00:00Z"},
+    "link": "https://www.wattpad.com/story/27502303-dreams-of-a-red-horizon",
+    "preview": "<p>You can read the first half of my still unpublished first novel, Dreams of a Red Horizon on Wattpad (for now).</p>"
   }
 ]

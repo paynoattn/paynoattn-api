@@ -7,7 +7,7 @@ const categories = [
 ];
 
 const sources = [
-  'facebook', 'twitter', 'medium', 'wordpress', 'behance'
+  'facebook', 'twitter', 'medium', 'wordpress', 'behance', 'other'
 ];
 
 function categoryValidator(arr) {
