@@ -1,5 +1,13 @@
 [
   {
+    "title": "Flexbox Sticky Footer",
+    "categories": ["development"],
+    "source": "medium",
+    "date": { "$date": "2017-09-11T12:00:00Z"},
+    "link": "https://medium.com/@paynoattn/flexbox-sticky-footer-d19dab50c34",
+    "preview": "<p>Back in the days of floats and jQuery there were all sorts of hacks that were used to stick your footer at the end of the page if your content didn’t push it to the bottom.</p>"
+  },
+  {
     "title": "3 Common Mistakes I see people use in Rx and the Observable Pattern",
     "categories": ["development"],
     "source": "medium",
